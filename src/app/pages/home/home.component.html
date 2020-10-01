@@ -1,0 +1,25 @@
+<!--<mat-toolbar class="head" color="primary">
+  <mat-toolbar-row>
+    <span>News</span>
+  </mat-toolbar-row>
+</mat-toolbar>-->
+<header>
+  <h2>News</h2>
+</header>
+<p>hh</p>
+<content>
+  <p>.hjgjhgjgjgjgj</p>
+</content>
+<mat-card
+  class="example-card"
+  *ngFor="let item of details"
+  [routerLink]="['/details', item.author]"
+  routerLinkActive="router-link-active"
+>
+  <img mat-card-image [src]="item.urlToImage" />
+  <mat-card-content>
+    <mat-card-subtitle>{{ item.publishedAt | date }}</mat-card-subtitle>
+    <mat-card-title>{{ item.title }}</mat-card-title>
+  </mat-card-content>
+  <mat-card-actions> </mat-card-actions>
+</mat-card>
